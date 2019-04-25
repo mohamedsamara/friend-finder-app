@@ -1,0 +1,24 @@
+{
+  "name": "friend-finder-app",
+  "version": "1.0.0",
+  "description": "This application will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedsamara/Friend-Finder-App.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Mohamed Samara (https://github.com/mohamedsamara)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedsamara/Friend-Finder-App/issues"
+  },
+  "homepage": "https://github.com/mohamedsamara/Friend-Finder-App"
+}
