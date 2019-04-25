@@ -13,12 +13,18 @@
   },
   "keywords": [
     "node",
-    "express"
+    "express",
+    "express-handlebars"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mohamedsamara/Friend-Finder-App/issues"
   },
-  "homepage": "https://github.com/mohamedsamara/Friend-Finder-App"
+  "homepage": "https://github.com/mohamedsamara/Friend-Finder-App",
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
+  }
 }
