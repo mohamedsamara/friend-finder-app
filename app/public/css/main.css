@@ -17,6 +17,11 @@
 .navbar {
   background-color: #f5f5f5 !important;
 }
+
+.bootstrap-select {
+  display: block !important;
+  width: 300px !important;
+}
 /* end bootstrap overrides */
 
 /* start footer styles */
@@ -49,6 +54,9 @@
   color: #3e5b99 !important;
 }
 
+.form-group label {
+  text-transform: capitalize;
+}
 /* end survey page styles */
 
 /* end application styles */
