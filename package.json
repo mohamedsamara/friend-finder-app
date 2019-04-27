@@ -14,7 +14,8 @@
   "keywords": [
     "node",
     "express",
-    "express-handlebars"
+    "express-handlebars",
+    "express-validator"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",

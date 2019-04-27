@@ -4,7 +4,7 @@
   "main": "server.js",
   "authors": ["Mohamed Samara (https://github.com/mohamedsamara)"],
   "license": "ISC",
-  "keywords": ["node", "express", "express-handlebars"],
+  "keywords": ["node", "express", "express-handlebars", "express-validator"],
   "homepage": "https://github.com/mohamedsamara/Friend-Finder-App",
   "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {

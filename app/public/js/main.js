@@ -6,17 +6,17 @@ $(document).ready(function() {
 var validateFormData = function() {
   var isFormValid = true;
 
-  //   $('.input-form').each(function() {
-  //     if ($(this).val() === '') {
-  //       isFormValid = false;
-  //     }
-  //   });
+  $('.input-form').each(function() {
+    if ($(this).val() === '') {
+      isFormValid = false;
+    }
+  });
 
-  //   $('.selectpicker').each(function() {
-  //     if ($(this).val() == 0) {
-  //       isFormValid = false;
-  //     }
-  //   });
+  $('.selectpicker').each(function() {
+    if ($(this).val() == 0) {
+      isFormValid = false;
+    }
+  });
 
   return isFormValid;
 };
