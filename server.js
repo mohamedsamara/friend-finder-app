@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 const path = require('path');
 
 const { getHomePage, getSurveyPage } = require('./app/routes/view');
@@ -17,6 +18,9 @@ app.use(bodyParser.json()); // parse form data client
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'handlebars');
+
+// Express Validator Middleware
+app.use(expressValidator());
 
 app.listen(port, () => {
   console.log(`app listening on port ${port}!`);

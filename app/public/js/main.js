@@ -1,21 +1,22 @@
 $(document).ready(function() {
   $('.my-select').selectpicker('render');
+  $('#alert-notification').hide();
 });
 
 var validateFormData = function() {
   var isFormValid = true;
 
-  $('.input-form').each(function() {
-    if ($(this).val() === '') {
-      isFormValid = false;
-    }
-  });
+  //   $('.input-form').each(function() {
+  //     if ($(this).val() === '') {
+  //       isFormValid = false;
+  //     }
+  //   });
 
-  $('.selectpicker').each(function() {
-    if ($(this).val() == 0) {
-      isFormValid = false;
-    }
-  });
+  //   $('.selectpicker').each(function() {
+  //     if ($(this).val() == 0) {
+  //       isFormValid = false;
+  //     }
+  //   });
 
   return isFormValid;
 };
@@ -75,7 +76,18 @@ $('#submit-survey').on('click', function(event) {
 
         $('#friend-modal').modal('toggle');
       },
-      error: function(err) {}
+      error: function(err) {
+        var message = '';
+        $.each(err.responseJSON.error, function(i, error) {
+          message += '* ' + error.msg + ' ';
+        });
+
+        $('.alert').append(message);
+
+        $('#alert-notification')
+          .fadeIn()
+          .fadeOut(3000);
+      }
     });
   } else {
     alert('Some data is required!!');

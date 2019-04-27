@@ -15,22 +15,31 @@ router.post('/friends', (req, res) => {
     difference: 10000
   };
 
-  for (var i = 0; i < friends.length; i++) {
-    var difference = 0;
+  req.checkBody('name', 'Name is required').notEmpty();
+  req.checkBody('photoLink', 'photo url is required').notEmpty();
 
-    for (var j = 0; j < friends[i].scores.length; j++) {
-      difference += Math.abs(friends[i].scores[j] - friend.scores[j]);
+  let errors = req.validationErrors();
+
+  if (errors) {
+    res.status(404).json({ error: errors });
+  } else {
+    for (var i = 0; i < friends.length; i++) {
+      var difference = 0;
+
+      for (var j = 0; j < friends[i].scores.length; j++) {
+        difference += Math.abs(friends[i].scores[j] - friend.scores[j]);
+      }
+
+      if (difference <= match.difference) {
+        match.name = friends[i].name;
+        match.photo = friends[i].photo;
+        match.difference = difference;
+      }
     }
 
-    if (difference <= match.difference) {
-      match.name = friends[i].name;
-      match.photo = friends[i].photo;
-      match.difference = difference;
-    }
+    friends.push(friend);
+    res.json(match);
   }
-
-  friends.push(friend);
-  res.json(match);
 });
 
 module.exports = router;
