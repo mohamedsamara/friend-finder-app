@@ -5,6 +5,18 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
+h3 {
+  color: #145086;
+}
+
+h5 {
+  color: #4a68aa;
+}
+
 .wrapper {
   padding: 100px 0px;
 }
@@ -60,6 +72,12 @@ body {
 
 .form-group label {
   text-transform: capitalize;
+  color: #145086;
+}
+
+#friend-name {
+  text-transform: capitalize;
+  color: #145086;
 }
 /* end survey page styles */
 

@@ -1,5 +1,6 @@
 <h3>Survey Questions</h3>
 <hr />
+<br />
 
 <h5>About you</h5>
 <br />
@@ -7,12 +8,12 @@
 <div class="form-group">
     <label>Name (Required)
     </label>
-    <input type="text" class="form-control" id="name" name="name">
+    <input type="text" class="form-control input-form" id="name" name="name">
 </div>
 <div class="form-group">
     <label>Link to Photo Image (Required)
     </label>
-    <input type="text" class="form-control" id="photo-link" name="photo-link">
+    <input type="text" class="form-control input-form" id="photo-link" name="photo-link">
 </div>
 
 {{#each questions}}
@@ -37,4 +38,18 @@
 
 <hr />
 
-<button type="submit" id="submit-survey" class="btn btn-primary">Add Todo</button>
+<button type="submit" id="submit-survey" class="btn btn-primary">Submit Survey</button>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="friend-modal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 id="friend-name"></h3>
+                <img id="friend-photo" src="" />
+            </div>
+        </div>
+    </div>
+</div>
