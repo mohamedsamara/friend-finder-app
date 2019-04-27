@@ -1,50 +1,40 @@
 <h3>Survey Questions</h3>
 <hr />
 
-<form method='POST' action='/todos/add'>
-    <h5>About you</h5>
-    <br />
+<h5>About you</h5>
+<br />
 
-    <div class="form-group">
-        <label>Name (Required)
-        </label>
-        <input type="text" class="form-control" id="name" name="name">
-    </div>
-    <div class="form-group">
-        <label>Link to Photo Image (Required)
-        </label>
-        <input type="text" class="form-control" id="photo-link" name="photo-link">
-    </div>
+<div class="form-group">
+    <label>Name (Required)
+    </label>
+    <input type="text" class="form-control" id="name" name="name">
+</div>
+<div class="form-group">
+    <label>Link to Photo Image (Required)
+    </label>
+    <input type="text" class="form-control" id="photo-link" name="photo-link">
+</div>
 
-    {{#each questions}}
-
-
-    <div class="form-group">
-        <label><strong>{{this.title}}</strong>
-        </label>
-        <p>{{this.question}}</p>
-        <select class="selectpicker" data-live-search="true" id="{{this.id}}">
-
-            {{#each this.options}}
-
-            <option>{{this.text}}</option>
-
-            {{/each}}
-
-        </select>
-    </div>
-
-    {{/each}}
+{{#each questions}}
 
 
+<div class="form-group">
+    <label><strong>{{this.title}}</strong>
+    </label>
+    <p>{{this.question}}</p>
+    <select class="selectpicker" data-live-search="true" id="{{this.id}}">
 
+        {{#each this.options}}
 
+        <option value={{this.id}}>{{this.text}}</option>
 
+        {{/each}}
 
+    </select>
+</div>
 
+{{/each}}
 
-    <hr />
+<hr />
 
-
-    <button type="submit" class="btn btn-primary">Add Todo</button>
-</form>
+<button type="submit" id="submit-survey" class="btn btn-primary">Add Todo</button>

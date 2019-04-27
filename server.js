@@ -11,7 +11,7 @@ const port = 3000;
 // set public folder
 app.use(express.static(path.join(__dirname, 'app/public')));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // parse form data client
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));

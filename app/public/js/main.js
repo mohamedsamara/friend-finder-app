@@ -1,9 +1,58 @@
 $(document).ready(function() {
-  $('.my-select').selectpicker();
+  $('.my-select').selectpicker('render');
+});
 
-  $(document).on('change', '.selectpicker', function() {
-    var id = $(this).attr('id');
+$('#submit-survey').on('click', function(event) {
+  event.preventDefault();
 
-    console.log('id', id);
+  var dataForm = {
+    name: $('#name')
+      .val()
+      .trim(),
+    photoLink: $('#photo-link')
+      .val()
+      .trim(),
+    scores: [
+      $('#q1')
+        .val()
+        .trim(),
+      $('#q2')
+        .val()
+        .trim(),
+      $('#q3')
+        .val()
+        .trim(),
+      $('#q4')
+        .val()
+        .trim(),
+      $('#q5')
+        .val()
+        .trim(),
+      $('#q6')
+        .val()
+        .trim(),
+      $('#q7')
+        .val()
+        .trim(),
+      $('#q8')
+        .val()
+        .trim(),
+      $('#q9')
+        .val()
+        .trim(),
+      $('#q10')
+        .val()
+        .trim()
+    ]
+  };
+
+  $.ajax({
+    type: 'POST',
+    url: '/api/friends',
+    data: dataForm,
+    success: function(response) {
+      console.log('response', response);
+    },
+    error: function(err) {}
   });
 });
