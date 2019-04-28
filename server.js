@@ -7,7 +7,7 @@ const path = require('path');
 const { getHomePage, getSurveyPage } = require('./app/routes/view');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5000;
 
 // set public folder
 app.use(express.static(path.join(__dirname, 'app/public')));
@@ -22,8 +22,8 @@ app.set('view engine', 'handlebars');
 // Express Validator Middleware
 app.use(expressValidator());
 
-app.listen(port, () => {
-  console.log(`app listening on port ${port}!`);
+app.listen(PORT, () => {
+  console.log(`app listening on port ${PORT}!`);
 });
 
 // routes for the app
