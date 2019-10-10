@@ -12,7 +12,7 @@
     "express-handlebars",
     "express-validator"
   ],
-  "homepage": "https://github.com/mohamedsamara/Friend-Finder-App",
+  "homepage": "https://github.com/mohamedsamara/friend-finder-app",
   "ignore": [
     "**/.*",
     "node_modules",
