@@ -21,7 +21,7 @@ Friend Finder is deployed on Heroku. Please check it out [here](https://obscure-
 Some basic Git commands are:
 
 ```
-$ git clone https://github.com/mohamedsamara/Friend-Finder-App.git
+$ git clone https://github.com/mohamedsamara/friend-finder-app.git
 $ cd project
 $ npm install
 $ bower install
