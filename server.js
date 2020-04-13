@@ -33,3 +33,8 @@ app.get('/survey', getSurveyPage);
 // Route Files
 let friends = require('./app/routes/api');
 app.use('/api', friends);
+
+// 404 not found view
+app.use('*', (req, res) => {
+  res.render('404Page');
+});
