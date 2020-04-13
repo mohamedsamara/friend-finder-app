@@ -22,8 +22,8 @@
   ],
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.0",
-    "components-font-awesome": "^5.4.2",
-    "bootstrap-select": "^1.13.10"
+    "jquery": "^1.12.4",
+    "bootstrap-select": "^1.13.10",
+    "font-awesome-5": "^5.13.0"
   }
 }

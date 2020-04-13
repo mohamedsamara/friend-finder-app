@@ -11,10 +11,6 @@ This application will take in results from your users' surveys, then compare the
   * Express Validator middleware is integrated to validate data on the server
   * Jquery for dom manipulation, call api using jquery ajax
 
-## Demo
-	
-Friend Finder is deployed on Heroku. Please check it out [here](https://obscure-headland-76213.herokuapp.com/).
-
 
 ## Install
 
@@ -24,7 +20,6 @@ Some basic Git commands are:
 $ git clone https://github.com/mohamedsamara/friend-finder-app.git
 $ cd project
 $ npm install
-$ bower install
 
 ```
 
