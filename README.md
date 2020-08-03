@@ -20,7 +20,6 @@ Some basic Git commands are:
 $ git clone https://github.com/mohamedsamara/friend-finder-app.git
 $ cd project
 $ npm install
-
 ```
 
 ## Languages & tools
